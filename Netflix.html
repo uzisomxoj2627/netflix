@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./main.css">
+    <title>NetflixApp</title>
+</head>
+
+<body>
+    <header class="header">
+        <div class="header-content">
+            <!-- logo -->
+            <div class="Logo">
+                <img src="https://www.aldavr.com/assets/img/logo/logo-top.png" alt="">
+            </div>
+
+            <!-- Search -->
+            <div class="search-bar">
+                <input type="text" class="search-input" placeholder="Qidirish...">
+                <button class="search-button">Qidirish</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Category -->
+    <div class="container">
+        <div class="categories" id="categories">
+            <button class="category-button active" data-category="popular">Mashxur</button>
+            <button class="category-button" data-category="top_rated">Top rated</button>
+            <button class="category-button" data-category="upcoming">Upcoming</button>
+            <button class="category-button" data-category="now_playing">Now Playing</button>
+        </div>
+        <div class="movie-grid" id="movieGrid"></div>
+    </div>
+
+    <!-- Modal -->
+    <div id="movieModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div class="video-container">
+                <iframe id="movieTrailer" src="" frameborder="0" allowfullscreen></iframe>
+            </div>
+            <div class="movie-details" id="movieDetails"></div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="./main.js"></script>
+</body>
+
+</html>
